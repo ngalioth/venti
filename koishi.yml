@@ -1,0 +1,123 @@
+plugins:
+  group:server:
+    server:1djiey:
+      port: 5140
+      maxPort: 5149
+    ~server-satori:1jgbd7: {}
+    ~server-temp:rhvh2s: {}
+  group:basic:
+    ~admin:pq76jv: {}
+    ~bind:v4hedg: {}
+    commands:t3magp:
+      help:
+        name: /帮助
+        aliases:
+          帮助: null
+      timer:
+        config:
+          hidden: true
+          permissions:
+            - authority:4
+      plugin:
+        config:
+          hidden: true
+          permissions:
+            - authority:4
+      status:
+        config:
+          hidden: true
+          permissions:
+            - authority:4
+      usage:
+        config:
+          hidden: true
+          permissions:
+            - authority:4
+      weather-当日天气:
+        name: /天气
+        aliases:
+          天气: null
+      weather-未来天气:
+        name: /未来天气
+        aliases:
+          未来天气: null
+      weather-qq-rainbowsky:
+        aliases:
+          weather-qq-rainbowsky:
+            filter: false
+      gi:
+        aliases:
+          原神: null
+        name: /原神
+      hsr:
+        aliases:
+          星铁: null
+        name: /星铁
+    help:u09u7z: {}
+    http:rx6fvd: {}
+    ~inspect:5hjczk: {}
+    locales:1l1oyy: {}
+    proxy-agent:hzlcgx: {}
+    rate-limit:vw0ezy: {}
+    telemetry:l64gmk: {}
+  group:console:
+    actions:ekvi8n: {}
+    analytics:mastka: {}
+    android:feqh6s:
+      $if: env.KOISHI_AGENT?.includes('Android')
+    ~auth:4htwc5: {}
+    config:ifv46e: {}
+    console:u9fdb0:
+      open: true
+    dataview:1ds81k: {}
+    desktop:rxwtdz:
+      $if: env.KOISHI_AGENT?.includes('Desktop')
+    explorer:ajlvzk: {}
+    logger:qsib37: {}
+    insight:y52ss6: {}
+    market:zrzbm8:
+      search:
+        endpoint: https://registry.koishi.t4wefan.pub/index.json
+    notifier:nzfaf7: {}
+    oobe:tsno1e: {}
+    sandbox:8idwph: {}
+    status:arvvie: {}
+    theme-vanilla:jbwo80: {}
+  group:storage:
+    ~database-mongo:fcf8mh:
+      database: koishi
+    ~database-mysql:kaiowt:
+      database: koishi
+    ~database-postgres:fv94j0:
+      database: koishi
+    database-sqlite:6rvtgd:
+      path: data/koishi.db
+    assets-local:d0gvso: {}
+  group:adapter:
+    adapter-qq:25fltn:
+      id: ${{env.QQ_ID}}
+      secret: ${{env.QQ_SECRET}}
+      token: ${{env.QQ_TOKEN}}
+      type: public
+      intents:
+        - DIRECT_MESSAGES
+        - USER_MESSAGE
+        - MESSAGE_AUDIT
+        - PUBLIC_GUILD_MESSAGES
+    ~adapter-satori:3uio26: {}
+  group:develop:
+    $if: env.NODE_ENV === 'development'
+    hmr:izur3n:
+      root: .
+  tex:ruwilw: {}
+  puppeteer:es7tu8: {}
+  weather-qq-rainbowsky:4876qq: {}
+  ba-logo:z57rkc: {}
+  venti:be4vqa: {}
+prefix:
+  - /
+  - null
+i18n:
+  locales:
+    - zh-CN
+    - en-US
