@@ -13,14 +13,4 @@
       restart_delay: 5000,
     },
   ],
-  deploy: {
-    production: {
-      user: "alioth",
-      host: "124.223.92.5",
-      ref: "origin/main",
-      repo: "/home/alioth/projects/venti",
-      path: "/home/alioth/deploy/venti",
-      "post-deploy": "source ~/.nvm/nvm.sh && source ~/projects/env.prod && yarn install && yarn build && pm2 reload ecosystem.json5 --env production",
-    },
-  },
 }

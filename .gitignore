@@ -28,3 +28,5 @@ tsconfig.tsbuildinfo
 *.ntvs*
 *.njsproj
 *.sln
+
+ecosystem.deploy.json5
